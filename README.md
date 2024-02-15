@@ -6,7 +6,7 @@ Our website is a forum where users can log in to an account and post/view/commen
 
 
 - We wanted to create a forum that could act as a resource for people with technology related questions. 
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- As individuals that have experienced various technological issues, we have collectively agreed that the internet is lacking a robut resource for all your tech troubleshooting or general discourse needs. 
 - What problem does it solve?
 - What did you learn?
 
@@ -33,7 +33,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Amanda Corey: https://github.com/Amjcorey
+Coral Darling: https://github.com/CoralDarling
+Gustavo Duque: https://github.com/Wormhole616
+Garrett Lieb: https://github.com/garrett-lieb
+
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
@@ -51,7 +55,7 @@ The last section of a high-quality README file is the license. This lets other d
 
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](://shielhttpsds.io/). You may not understand what they all represent now, but you will in time.
 
 ## Features
 
@@ -63,31 +67,6 @@ If you created an application or package and would like other developers to cont
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-Now fill in the details as much as you can, referring to the following tips as you go:
-
-Remember that # in markdown is the top-level header, which is typically the title of the page. You can create your own title. For our example purposes, we will use “Prework Study Guide Webpage”.
-  # Prework Study Guide Webpage
-Next, ## in markdown is a subheading. We have several subheadings in this README.
-
-For ## Description, write a short description of the Prework Study Guide Webpage. Use the guiding questions to help you.
-
-We don't have a long README, so you can delete the ## Table of Contents section.
-
-For ## Installation, we don’t have any steps to take to install anything for our webpage, so write “N/A” for this section.
-
-For ## Usage, write a short paragraph about how this Prework Study Guide can be used. For example, you can write about how each section contains notes about a certain topic, like HTML, CSS, JavaScript, Git. And if we open the DevTools console, we can see the JavaScript running. It will list the topics we learned from prework and choose one topic for us to study first. For now, we don't need to add an image, so you can delete that part.
-
-For ## Credits, we didn’t collaborate with others nor did we use any third-party assets or tutorials, so we can write “N/A”.
-
-For ## License, keep the MIT license that we chose when we first created the repository.
-
-The rest of the sections don’t apply to us, but feel free to take a look.
-
-Code Review
-How did you do? Let’s take a moment to review what this might look like. Review the following example of the project README and compare your results:
-
-# Prework Study Guide Webpage
 
 ## Description
 
