@@ -30,9 +30,9 @@
             <h3 class="text-2xl p-5"> Enter Your Login Information</h3>
             <form action="login.php" method="post">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
+                <input type="text" id="username-login" name="username" required><br><br>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
+                <input type="password" id="password-login" name="password" required><br><br>
                 <input type="submit" value="Login" class="bg-slate-200 p-2 rounded-lg">
         </section>
 
@@ -40,11 +40,11 @@
             <h4 class="text-2xl text-center p-2.5 justify-center">New to the Bridge_IT? Sign Up Here</h4>
             <form action="signup.php" method="post">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
+                <input type="text" id="username-signup" name="username" required><br><br>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
+                <input type="password" id="password-signup" name="password" required><br><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email-signup" name="email" required><br><br>
                 <input type="submit" value="Sign Up" class="bg-slate-200 p-2 rounded-lg">
         </section>
 
@@ -68,7 +68,7 @@
         </section>
     </main>
        
-
+                 
 
     <section class="bg-lime-500">
         <table class="table-auto m-10 bg-lime-500 w-1/2">
@@ -103,3 +103,4 @@
 </body>
 </html>
 
+<script src="./public/js/login.js"></script>
