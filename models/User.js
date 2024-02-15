@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-const Avatar = require('avatar-initials');
+// const Avatar = require('avatar-initials');
 
 class User extends Model {
   // Checks the password against the encrypted password in the database.
@@ -62,14 +62,14 @@ User.init(
   }
 );
 
-const initial_png = Avatar.initialAvatar({
-    initials: 'MC',
-    initial_fg: '#888888',
-    initial_bg: '#f4f6f7',
-    initial_size: 0, // Defaults to height / 2
-    initial_weight: 100,
-    initial_font_family: "'Lato', 'Lato-Regular', 'Helvetica Neue'",
-  });
+// const initial_png = Avatar.initialAvatar({
+//     initials: 'MC',
+//     initial_fg: '#888888',
+//     initial_bg: '#f4f6f7',
+//     initial_size: 0, // Defaults to height / 2
+//     initial_weight: 100,
+//     initial_font_family: "'Lato', 'Lato-Regular', 'Helvetica Neue'",
+//   });
 
 
 module.exports = User;
