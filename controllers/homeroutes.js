@@ -25,10 +25,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET one blog
-router.get('/blog/:id', async (req, res) => {
+// GET one Topic
+router.get('/topic/:id', async (req, res) => {
   try {
-    const blogData = await Blog.findByPk(req.params.id, {
+    const blogData = await Topic.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -37,10 +37,10 @@ router.get('/blog/:id', async (req, res) => {
       ],
     });
 
-    const blog = blogData.get({ plain: true });
+    const Topic = blogData.get({ plain: true });
 
-    res.render('blog', {
-      ...blog,
+    res.render('topic', {
+      ...topic,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
