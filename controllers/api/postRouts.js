@@ -16,25 +16,22 @@ router.post('/', async (req, res) => {
   }
 });
 
-
+// If a DELETE request is made to /api/projects/:id, that project is deleted. 
 router.get('/:id', async (req, res) => {
   try {
-
-    const topictData = await Topic.get({
-
-      main
+    const postData = await Post.get({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!PostData) {
+    if (!topicData) {
       res.status(404).json({ message: 'No Topic found with this id!' });
       return;
     }
 
-    res.status(200).json(PostData);
+    res.status(200).json(postData);
   } catch (err) {
     res.status(500).json(err);
   }
