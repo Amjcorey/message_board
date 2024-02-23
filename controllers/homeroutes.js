@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { User, Topic } = require('../models');
+const { User, topic } = require('../models');
 const withAuth = require('../utils/auth');
 
-// GET all blogs for homepage
+// GET all topics for homepage
 router.get('/', async (req, res) => {
   try {
-    const blogData = await Blog.findAll({
+    const topicData = await topic.findAll({
       include: [
         {
           model: User,
@@ -14,10 +14,10 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const blogs = blogData.map((blog) => blog.get({ plain: true }));
+    const topic = topicData.map((topic) => topic.get({ plain: true }));
 
     res.render('homepage', {
-      blogs,
+      topic,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 // GET one Topic
 router.get('/topic/:id', async (req, res) => {
   try {
-    const blogData = await Topic.findByPk(req.params.id, {
+    const topicData = await topic.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -37,7 +37,7 @@ router.get('/topic/:id', async (req, res) => {
       ],
     });
 
-    const Topic = blogData.get({ plain: true });
+    const post = topicData.get({ plain: true });
 
     res.render('topic', {
       ...topic,
@@ -54,7 +54,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Blog, include: [{model: Comment}] }],
+      include: [{ model: topic, include: [{model: Comment}] }],
     });
 
     const user = userData.get({ plain: true });
