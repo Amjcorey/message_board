@@ -1,16 +1,16 @@
 const router = require('express').Router();
 // Import the Project model from the models folder
-const { Topic } = require('../../models');
+const { Post } = require('../../models');
 
 // If a POST request is made to /api/projects, a new project is created. If there is an error, the function returns with a 400 error. 
 router.post('/', async (req, res) => {
   try {
-    const newTopic = await Topic.create({
+    const newPost = await Post.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newTopic);
+    res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
 // If a DELETE request is made to /api/projects/:id, that project is deleted. 
 router.get('/:id', async (req, res) => {
   try {
-    const topictData = await Topic.get({
+    const postData = await Post.get({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(topicData);
+    res.status(200).json(postData);
   } catch (err) {
     res.status(500).json(err);
   }
