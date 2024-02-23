@@ -1,2 +1,47 @@
-<h1>{{initials}}</h1>
-<h3>{{number}}</h3>
+{{!-- <section>
+    <h2 class=“p-5 bg-slate-100”>Create Post</h2>
+    <form class=“form create-form bg-slate-100 w-/4 rounded-lg”>
+        <div class=“flex p-5 form-group”>
+            <label for=“title”>Title:</label>
+            <input class=“form-input p-1” type=“text” id=“title” cols=“25">
+        </div>
+        <div class=“flex p-5 form-group”>
+            <label for=“content”>Content:</label>
+            <textarea class=“form-input” id=“content” rows=“4” cols=“50"></textarea>
+        </div>
+        <button class=“p-2 m-2 bg-white border-solid round” id=“submit”>Submit</button>
+    </form>
+</section> --}}
+<section class=“”>
+    <div class=“p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double
+                    border-indigo-500 rounded-md text-blue-500">
+        <h2 class=“text-xl underline”>Here is a list of {{username}}’s recent posts!</h2>
+        {{!-- i need to put the blog posts here --}}
+        <section class=“block border-4 border-double rounded-md”>
+            {{#each blogs as |post|}}
+            <h3 class=“text-lg bold p-2 border-2 rounded-md bg-slate-100”>
+                {{!-- add href to title that redirects to blog.handlbars--}}
+                <a href=“/blogs/{{post.id}}“>{{post.title}}</a>
+            </h3>
+            <p class=“p-5 underline”>Date Posted:{{formatDate post.date_created}}</p>
+            <p class=“p-5">{{post.content}}</p>
+            <h4 class=“w-1/2 border-2 rounded-md bg-slate-100”>Comment(s):</h4>{{#each comments as |comment|}}
+            <p class=“text-lg p-2 border-bottom”>{{comment.comment}}</p>
+            {{/each}}
+            {{/each}}
+        </section>
+    </div>
+</section>
+
+React
+
+Reply
+
+
+<script src=“/js/logout.js”></script>
+<script src=“/js/newpost.js”></script>
+
+
+
+
+

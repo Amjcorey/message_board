@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// If a DELETE request is made to /api/projects/:id, that project is deleted. 
+
 router.get('/:id', async (req, res) => {
   try {
     const topictData = await Topic.get({
