@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
 
     const topictData = await Topic.get({
 
-      main
+      
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
