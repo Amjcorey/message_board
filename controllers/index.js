@@ -1,9 +1,17 @@
-// Import just the router express
 const router = require('express').Router();
-// Import the index.js from 'api' folder
-const apiRoutes = require('./api');
 
-// When a request is made to the /api route, it will be directed to the index.js in the 'api' folder.
-router.use('/api', apiRoutes);
+const homeroutes = require('./homeroutes');
+const apiroutes = require('./api');
+
+router.use('/', homeroutes);
+router.use('/api', apiroutes);
+
+
+
+// log 404 when a route is not found
+router.use((req, res) => {
+  res.send('<h1>404!!!</h1>');
+});
+
 
 module.exports = router;

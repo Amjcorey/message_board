@@ -9,14 +9,14 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['name'],
         },
       ],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('landingPage', {
       posts,
       logged_in: req.session.logged_in,
     });
@@ -32,7 +32,7 @@ router.get('/posts/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['name'],
         },
         {
           model: Comment,
@@ -82,8 +82,12 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('landingPage');
 });
 
 module.exports = router;
