@@ -51,6 +51,41 @@ router.get('/posts/:id', async (req, res) => {
   }
 });
 
+// get the games page
+
+router.get('/games', async (req, res) => {
+  try {
+    res.render('games', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get the audio-visual page
+router.get('/audio-visual', async (req, res) => {
+  try {
+    res.render('audio-visual', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get the technology page
+router.get('/technology', async (req, res) => {
+  try {
+    res.render('technology', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
