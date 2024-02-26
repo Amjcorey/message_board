@@ -1,0 +1,22 @@
+{{!-- need to make blog content corresponding to id in url populate this page --}}
+<section class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
+                    border-indigo-500 rounded-md text-blue-500">
+    
+    <h1 class="text-lg">Title: {{title}}</h1>
+    <p class="bg-slate-100 p-10">Body: {{content}}</p>
+     <form class="form comment-form p-5 borde-4 border-violet rounded-lg">
+    <h4 class="border-2 rounded-md bg-slate-100">Comment(s):</h4>
+    {{#each comments as |comment|}}
+    <p class="text-lg p-2 border-bottom">{{comment.comment}}</p>
+    {{/each}}
+    <div class="flex p-5 form-group">
+        <input type="hidden" name="post-id" value="{{id}}" />
+        <label class="p-5"for="content">Add A Comment:</label>
+        <textarea class="form-input bg-slate-100" id="comment" rows="4" cols="50"></textarea>
+    </div>
+    <button class="form comment-form p-2 m-2 border-solid rounded-full bg-blue-100 hover:bg-blue-700 hover:text-white font-bold"
+        id="submit">Submit</button>
+    </form>
+</section>
+
+<script src="/js/newcomment.js"></script>

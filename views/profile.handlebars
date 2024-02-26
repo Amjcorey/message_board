@@ -27,7 +27,7 @@
             {{#each posts as |post|}}
             <h3 class="text-lg bold p-2 border-2 rounded-md bg-slate-100">
                 {{!-- add href to title that redirects to post.handlbars--}}
-                <a href="/blogs/{{post.id}}">{{post.Topic}}</a>
+                <a href="/posts/{{post.id}}">{{post.Topic}}</a>
             </h3>
             <p class="p-5 underline">Date Posted:{{formatDate post.date_created}}</p>
             <p class="p-5">{{post.description}}</p>
