@@ -6,6 +6,7 @@
             <a href="/">BRIDGE_IT</a>
           </h3>
         </div>
+  <form class="login-form">
   <div class="login-body">
     <div class="login-container flex flex-row justify-center grid mx-4 mb-4 " >
       <div class="login-header relative grid mx-4 mb-4 -mt-6 overflow-hidden h-28"></div>
@@ -18,7 +19,7 @@
         </div>
         <div class="flex flex-col gap-4 p-6">
           <div class="relative h-11 w-full min-w-[200px]">
-            <input
+            <input id="user-login" type="text"
               class="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" " />
             <label
@@ -27,7 +28,7 @@
             </label>
           </div>
           <div class="relative h-11 w-full min-w-[200px]">
-            <input
+            <input id="password-login" type="password"
               class="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" " />
             <label
@@ -60,7 +61,7 @@
         <div class="p-6 pt-0">
           <button
             class="block w-full select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            type="button">
+            type="submit">
             Sign In
           </button>
           <p class="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
@@ -74,10 +75,9 @@
       </div>
     </div>
   </div>
+  </form>
 </body>
-
-
 
 </html>
 
-<script src = "login.js"></script>
+<script src = "/js/login.js"></script>
