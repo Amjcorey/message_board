@@ -22,11 +22,12 @@ router.post('/', async (req, res) => {
         const userData = await User.create(userInput);
         req.session.save(() => {
             req.session.user_id = userData.id;
-            req.session.username = userData.username;
+            req.session.username = userData.name;
             req.session.logged_in = true;
             res.status(200).json(userData);
         });
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
@@ -52,7 +53,7 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { username: req.body.username } });
+        const userData = await User.findOne({ where: { email: req.body.email } });
         if (!userData) {
             res
                 .status(400)
