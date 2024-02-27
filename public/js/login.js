@@ -1,4 +1,6 @@
-//prevent event default
+const loginHandler = async (event) => {
+  event.preventDefault();
+
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -11,24 +13,36 @@ const loginFormHandler = async (event) => {
   //If the response is ok, the user is redirected to the homepage. If the response is not ok, an alert is shown.
   console.log(email, password);
 
-    if (email && password) {
+
+  if (email && password) {
       const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
+          method: 'POST',
+          body: JSON.stringify({ email: email, password: password }),
+          headers: { 'Content-Type': 'application/json' },
       });
-  
+
       if (response.ok) {
+
         console.log('ok');
         document.location.replace('/');
+
+
       } else {
-        alert('Failed to log in.');
+          alert('Failed to log in');
       }
+<<<<<<< HEAD
     }
   };
   
+=======
+  }
+};
+
+
+>>>>>>> 87b0931aa1fc510a12f1ed337e8c01e1cb8b3b93
   
   document
     .querySelector('form')
     .addEventListener('submit', loginFormHandler);
+
   
